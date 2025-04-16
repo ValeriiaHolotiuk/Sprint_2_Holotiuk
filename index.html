@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valeriia Holotiuk | Web designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
+  
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-left">
+      <div class="top-left">HV</div>
+      <p class="greeting">Hi, my name is</p>
+      <h1 class="fullname">Valeriia <br>Holotiuk</h1>
+    </div>
+
+    <div class="hero-right">
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero-content">
+        <img src="pic/me.png" alt="Valeriia Holotiuk" class="hero-image">
+        
+<h2 class="title typewriter"></h2>
+
+        <p class="stack">HTML/CSS, JS, React, Python, Figma</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="about-left">
+      <img src="pic/uiux.jpg" alt="UIUX" class="about-img top-img" />
+      <img src="pic/data.jpg" alt="Frontend Dev" class="about-img middle-img" />
+      <img src="pic/big.jpg" alt="Data Icons" class="about-img bottom-img" />
+
+    </div>
+    <div class="about-right">
+      <h3 class="about-title">About me</h3>
+      <p>
+        Hey! I'm a Web and UI/UX designer with a creative background in floral design — I spent 8 years working with flowers, colours, and layouts, which naturally led me into the world of digital design. Now, I love creating clean, user-friendly websites using tools like Figma, Adobe, HTML/CSS, and JavaScript.
+      </p>
+      <p>
+        I’ve got a degree in Nanotechnology and Automation Engineering and have always been into tech — that’s why I’m currently studying Full Stack Development at Keyin College, learning how to bring both the design and functionality of websites to life. I’m also into data analysis — I enjoy working with Python, love a good math challenge, and I’m always curious about what data can tell us.
+      </p>
+      <p>
+        When I’m not designing or coding, I’m probably planning a trip or daydreaming about one. I worked as a travel manager for 2 years, and I’ve been hooked on travel and the hospitality world ever since. Exploring new places and meeting people from different cultures inspires a lot of what I do creatively.
+      </p>
+    </div>
+
+  </section>
+  <section class="skills-section" id="skills">
+    <h2 class="skills-title">My skills</h2>
+    <div class="skills-grid">
+      <div class="skill-circle" data-tooltip="Git – Version control system">
+        <img src="pic/git.jpg" alt="Git">
+        <span>Git</span>
+      </div>
+      <div class="skill-circle" data-tooltip="HTML – Markup for web pages">
+        <img src="pic/html.jpg" alt="HTML">
+        <span>HTML</span>
+      </div>
+      <div class="skill-circle" data-tooltip="CSS – Styling for layout and design">
+        <img src="pic/css.jpg" alt="CSS">
+        <span>CSS</span>
+      </div>
+      <div class="skill-circle" data-tooltip="JavaScript – Interactive frontend behavior">
+        <img src="pic/js.jpg" alt="JS">
+        <span>JS</span>
+      </div>
+      <div class="skill-circle" data-tooltip="React – JS library for building UIs">
+        <img src="pic/rec.jpg" alt="React">
+        <span>React</span>
+      </div>
+      <div class="skill-circle" data-tooltip="Figma – UI/UX design tool">
+        <img src="pic/figma.jpg" alt="Figma">
+        <span>Figma</span>
+      </div>
+      
+             </div>
+  </section>
+  <section class="contact-section" id="contact">
+    <h2 class="contact-title">Contact Me</h2>
+    <div class="contact-left">
+      <p class="contact-line">
+        <i class="fas fa-envelope"></i> lerboxx2203@gmail.com
+      </p>
+      <p class="contact-line">
+        <i class="fas fa-map-marker-alt"></i> St.John’s, NL, Canada
+      </p>
+      
+      
+      <p class="social-label">Check my social media!</p>
+      
+      <div class="social-icons">
+        <a href="https://www.instagram.com/valeriiaholotiuk?igsh=cjNraGhzcTlzNjIz&utm_source=qr"><img src="pic/inst.jpg" alt="Instagram" /></a>
+        <a href="https://www.facebook.com/share/18rbayrVer/?mibextid=wwXIfr"><img src="pic/facebook.jpg" alt="Facebook" /></a>
+        <a href="https://www.linkedin.com/in/valeriia-holotiuk-baa60228a/"><img src="pic/link.jpg" alt="Linkedin" /></a>
+      </div>
+    </div>
+   
+      
+      <p id="successMessage" style="display: none;" class="popup">Message sent successfully!</p>
+      
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" placeholder="Your Message" maxlength="300"></textarea>
+        <p id="charCount">0 / 300</p>
+        <button type="submit">Send Message</button>
+      </form>
+      
+      
+      
+      
+      
+  </section>
+
+  <script src="script.js"></script>
+</body>
+<footer class="project-footer">
+  <p>&copy; Valeriia Holotiuk</p>
+</footer>
+
+</html>
