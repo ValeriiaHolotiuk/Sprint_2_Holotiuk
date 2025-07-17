@@ -61,3 +61,41 @@ scrollBtn.addEventListener("click", () => {
 });
 
 
+// Character counter
+const messageInput = document.getElementById("message");
+const charCount = document.getElementById("charCount");
+
+messageInput.addEventListener("input", () => {
+  charCount.textContent = `${messageInput.value.length} / 300`;
+});
+
+// Success popup after submission
+const form = document.getElementById("contactForm");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        successMessage.style.display = "block";
+        form.reset();
+        charCount.textContent = "0 / 300";
+        setTimeout(() => {
+          successMessage.style.display = "none";
+        }, 3000);
+      } else {
+        alert("Failed to send. Try again.");
+      }
+    })
+    .catch(() => alert("Error sending message"));
+});

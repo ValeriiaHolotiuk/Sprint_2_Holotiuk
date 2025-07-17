@@ -17,7 +17,7 @@ body {
   
   
   .hero-left {
-    background-color: #FFB703;
+    background: linear-gradient(135deg, #FFB703, #f4b942);
     width: 30%;
     padding: 300px 100px;
     position: relative;
@@ -25,6 +25,7 @@ body {
     flex-direction: column;
     justify-content: center;
   }
+  
   
   .top-left {
     position: absolute;
@@ -38,12 +39,13 @@ body {
     font-size: 1.2rem;
     margin-top: 4rem;
   }
-  
   .fullname {
     font-size: 2.8rem;
     font-weight: bold;
     margin: 1rem 0 0 0;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
   }
+  
   
   .hero-right {
     background-color: #1E1E1E;
@@ -88,8 +90,13 @@ body {
   .hero-image {
     max-width: 280px;
     margin-bottom: 1.5rem;
-    
+    filter: drop-shadow(0 0 15px rgba(255, 183, 3, 0.3));
+    transition: transform 0.3s ease;
   }
+  .hero-image:hover {
+    transform: scale(1.03);
+  }
+  
   
   .title {
     font-size: 1.6rem;
@@ -158,55 +165,49 @@ body {
 
 
   .skills-section {
-    background-color: #FFB703;
-    padding: 3rem 1rem;
+    background-color: #111;
+    color: #fcd34d;
     text-align: center;
+    padding: 4rem 2rem;
   }
   
-  .skills-title {
-    font-size: 2rem;
-    color: black;
+  .skills-section h2 {
+    font-size: 2.5rem;
     margin-bottom: 2rem;
   }
   
-  .skills-grid {
+  .skills-container {
     display: flex;
     justify-content: center;
-    gap: 2rem;
     flex-wrap: wrap;
-    max-width: 100%;
-    padding: 0 1rem;
+    gap: 2rem;
   }
   
+  .skill-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 120px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
   
-  .skill-circle {
-    width: 110px;
-    height: 110px;
-    background-color: #ddd;
-    color: black;
-    font-weight: 500;
+  .skill-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px #fcd34d;
+  }
+  
+  .skill-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skill-card p {
+    margin: 0;
     font-size: 1rem;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-    overflow: hidden;
-    padding: 10px;
   }
   
-  .skill-circle img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 5px;
-  }
-  
-  .skill-circle span {
-    font-size: 0.85rem;
-  }
- 
   
 
   .contact-section {
@@ -557,6 +558,96 @@ body {
     }
   
   }
+  /* === Education Page === */
+#education-page {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px 20px;
+  font-family: 'Lora', serif;
+  color: white;
+  background-color: #1E1E1E;
+}
+
+#education-page h1 {
+  font-size: 2.5rem;
+  color: #FFB703;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+}
+
+.education-block {
+  margin-bottom: 40px;
+  border-left: 4px solid #FFB703;
+  padding-left: 20px;
+}
+
+.education-block h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.education-block p {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 0;
+}
+
   
+.edu-header {
+  background-color: #1E1E1E;
+  padding: 1.5rem 2rem;
+}
+
+.edu-header nav {
+  display: flex;
+  justify-content: center;
+}
+
+.edu-header ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.edu-header a {
+  color: #FFB703;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.edu-header a:hover,
+.edu-header a.active {
+  color: white;
+  text-decoration: underline;
+}
+.role-typing {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1E1E1E;
+  margin-top: 0.5rem;
+  .fade-in {
+    animation: fadeInUp 1.2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
   
-  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  }
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}

@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="style.css" />
   <button id="scrollToTopBtn" title="Go to top">↑</button>
     <meta property="og:title" content="Valeriia Holotiuk Portfolio" />
-    <meta property="og:description" content="Web developer & UI/UX enthusiast — check out my work!" />
+    <meta property="og:description" content="Full stack developer & UI/UX enthusiast — check out my work!" />
     <meta property="og:image" content="https://sprint-2-holotiuk.vercel.app/pic/me.png" />
     <meta property="og:url" content="https://sprint-2-holotiuk.vercel.app" />
     <meta name="twitter:card" content="summary_large_image">
-    >
+    
     
 </head>
 <body>
@@ -22,6 +22,8 @@
       <div class="top-left">HV</div>
       <p class="greeting">Hi, my name is</p>
       <h1 class="fullname">Valeriia <br>Holotiuk</h1>
+      <p class="role fade-in" style="animation-delay: 0.3s;">Junior Full Stack Developer & UI/UX Designer</p>
+      
     </div>
 
     <div class="hero-right">
@@ -29,7 +31,7 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="projects.html">Projects</a></li>
-
+          <li><a href="education.html">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -38,7 +40,7 @@
         
 <h2 class="title typewriter"></h2>
 
-        <p class="stack">HTML/CSS, JS, React, Python, Figma</p>
+        <p class="stack">HTML/CSS, JS, React, Python, Figma, Java, Node, SQL,AWS </p>
       </div>
     </div>
   </section>
@@ -62,35 +64,54 @@
         When I’m not designing or coding, I’m probably planning a trip or daydreaming about one. I worked as a travel manager for 2 years, and I’ve been hooked on travel and the hospitality world ever since. Exploring new places and meeting people from different cultures inspires a lot of what I do creatively.
       </p>
     </div>
-
+    
   </section>
-  <section class="skills-section" id="skills">
-    <h2 class="skills-title">My skills</h2>
-    <div class="skills-grid">
-      <div class="skill-circle" data-tooltip="Git – Version control system">
+  <section class="skills-section">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="skill-card" title="Version Control">
         <img src="pic/git.jpg" alt="Git">
-        <span>Git</span>
+        <p>Git</p>
       </div>
-      <div class="skill-circle" data-tooltip="HTML – Markup for web pages">
+      <div class="skill-card" title="HTML5 Markup Language">
         <img src="pic/html.jpg" alt="HTML">
-        <span>HTML</span>
+        <p>HTML</p>
       </div>
-      <div class="skill-circle" data-tooltip="CSS – Styling for layout and design">
+      <div class="skill-card" title="CSS for Styling">
         <img src="pic/css.jpg" alt="CSS">
-        <span>CSS</span>
+        <p>CSS</p>
       </div>
-      <div class="skill-circle" data-tooltip="JavaScript – Interactive frontend behavior">
+      <div class="skill-card" title="JavaScript Programming">
         <img src="pic/js.jpg" alt="JS">
-        <span>JS</span>
+        <p>JavaScript</p>
       </div>
-      <div class="skill-circle" data-tooltip="React – JS library for building UIs">
-        <img src="pic/rec.jpg" alt="React">
-        <span>React</span>
+      <div class="skill-card" title="Frontend Framework">
+        <img src="pic/react.jpg" alt="React">
+        <p>React</p>
       </div>
-      <div class="skill-circle" data-tooltip="Figma – UI/UX design tool">
+      <div class="skill-card" title="UI/UX Design Tool">
         <img src="pic/figma.jpg" alt="Figma">
-        <span>Figma</span>
+        <p>Figma</p>
       </div>
+      <div class="skill-card" title="Backend with Node.js">
+        <img src="pic/nodejs.png" alt="Node.js">
+        <p>Node.js</p>
+      </div>
+      <div class="skill-card" title="Java Programming">
+        <img src="pic/java.png" alt="Java">
+        <p>Java</p>
+      </div>
+      <div class="skill-card" title="Structured Query Language">
+        <img src="pic/sql.png" alt="SQL">
+        <p>SQL</p>
+      </div>
+      <div class="skill-card" title="Amazon Web Services">
+        <img src="pic/aws.png" alt="AWS">
+        <p>AWS</p>
+      </div>
+    </div>
+  </section>
+  
       
              </div>
   </section>
@@ -115,16 +136,16 @@
     </div>
    
       
-      <p id="successMessage" style="display: none;" class="popup">Message sent successfully!</p>
-      
-      <form id="contactForm">
-        <input type="text" id="name" placeholder="Your Name">
-        <input type="email" id="email" placeholder="Your Email">
-        <textarea id="message" placeholder="Your Message" maxlength="300"></textarea>
-        <p id="charCount">0 / 300</p>
-        <button type="submit">Send Message</button>
-      </form>
-      
+    <p id="successMessage" style="display: none;" class="popup">Message sent successfully!</p>
+
+<form id="contactForm" action="https://formspree.io/f/xblgbnpp" method="POST">
+  <input type="text" id="name" name="name" placeholder="Your Name" required>
+  <input type="email" id="email" name="email" placeholder="Your Email" required>
+  <textarea id="message" name="message" placeholder="Your Message" maxlength="300" required></textarea>
+  <p id="charCount">0 / 300</p>
+  <button type="submit">Send Message</button>
+</form>
+
       
       
       
